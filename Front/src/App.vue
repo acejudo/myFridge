@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+     <app-navigation class="topbar"></app-navigation>
+     <transition name="transition" appear mode="out-in">
+      <router-view/>
+     </transition>
   </div>
 </template>
 
 <script>
+import AppNavigation from '@/components/navigation.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { AppNavigation }
 }
 </script>
 
